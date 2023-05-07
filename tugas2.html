@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>tugas 2</title>
+    <style>
+      #kotak {
+        width: 600px;
+        height: 600px;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="kotak"></div>
+    <script>
+      var kotak = document.getElementById("kotak");
+      var images = ["gambar1.jpg", "gambar2.jpg", "gambar3.jpg", "gambar4.jpg", "gambar5.jpg"];
+      var currentImageIndex = 0;
+
+      setInterval(function() {
+        currentImageIndex++;
+        if (currentImageIndex == images.length) {
+          currentImageIndex = 0;
+        }
+        kotak.style.backgroundImage = "url('" + images[currentImageIndex] + "')";
+      }, 4000);
+    </script>
+  </body>
+</html>
